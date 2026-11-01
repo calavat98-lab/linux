@@ -1,0 +1,500 @@
+   83  cd testingGitOption/
+   84  ls
+   85  git status
+   86  cd ..
+   87  ls
+   88  mkdir main
+   89  ls
+   90  cd main/
+   91  git init
+   92  git branch -m main
+   93  git status
+   94  git remote add origin git@github.com:calavat98-lab/LINUX.git
+   95  git remote -v
+   96  ls
+   97  cd ..
+   98  ls
+   99  git checkout main
+  100  git status
+  101  ls
+  102  cd LINUX/
+  103  ls
+  104  git status
+  105  git checkout main
+  106  ls
+  107  git rm script.sh 
+  108  ls
+  109  git commit -m "Удален первый файл main"
+  110  git push origin main
+  111  git push origin main
+  112  git push origin main
+  113  ls
+  114  cd ..
+  115  ls
+  116  cd testingGitOption/
+  117  ls
+  118  cat script1.sh 
+  119  git status
+  120  cd ..
+  121  ls
+  122  cd main/
+  123  git status
+  124  ls
+  125  git remote -v
+  126  vim script1.sh
+  127  chmod +x script1.sh 
+  128  ./script1.sh 
+  129  cd ..
+  130  ls
+  131  cd testingGitOption/
+  132  ls
+  133  mv script1.sh script2.sh
+  134  vim script2.sh 
+  135  vim script2.sh 
+  136  git status
+  137  cd ..
+  138  ls
+  139  cd main/
+  140  git status
+  141  git add .
+  142  git status
+  143  git commit -m "Первый скрипт"
+  144  git push -u origin script1.sh
+  145  git push -u origin main 
+  146  git remote set-url origin https://github.com
+  147  git remote set-url origin https://github.com
+  148  ls
+  149  cd ..
+  150  ls
+  151  cd L
+  152  cd LINUX/
+  153  ls
+  154  git status
+  155  cd ..
+  156  ls
+  157  cd main/
+  158  ls
+  159  pwd
+  160  cp script1.sh /root/LINUX/
+  161  cd ..
+  162  ls
+  163  cd LINUX/
+  164  LSS
+  165  ls
+  166  git status
+  167  git add .
+  168  git status
+  169  git commit -m "Первый скрипт"
+  170  git push
+  171  ls
+  172  cat script1.sh 
+  173  ls
+  174  cp script1.sh script2.sh 
+  175  vim script2.sh 
+  176  git status
+  177  git add .
+  178  git commit -m "Второй скрипт(доработанный)"
+  179  git push
+  180  git config --global credentialls -la ~/.ssh
+  181  git config --global credentialls -al ~/.ssh
+  182  ssh-keygen -t ed25519 -C "calavat98@mail.ru"
+  183  eval "$(ssh-agent -s)"
+  184  ssh-add ~/.ssh/id_ed25519
+  185  cat ~/.ssh/id_ed25519
+  186  cat ~/.ssh/id_ed25519.pub 
+  187  ssh -T git@github.com
+  188  git remote set-url origin git@github.com:calavat98-lab/LINUX.git
+  189  git remote -v
+  190  git push
+  191  cd ..
+  192  ls
+  193  rm -r main/
+  194  ls
+  195  ls
+  196  cd testingGitOption/
+  197  ls
+  198  cat script2.sh 
+  199  mv script2.sh script3.sh
+  200  vim script3.sh 
+  201  git status
+  202  ls
+  203  cat script3.sh 
+  204  cd ..
+  205  ls
+  206  cd LINUX/
+  207  ls
+  208  cat script1.sh 
+  209  cat script2.sh 
+  210  ls
+  211  cd ..
+  212  ls
+  213  cd testingGitOption/
+  214  ls
+  215  pwd
+  216  mv script3.sh /root/LINUX/
+  217  ls
+  218  cd ..
+  219  ls
+  220  cd LINUX/
+  221  ls
+  222  git status
+  223  git add
+  224  git add .
+  225  git commit -m "Добавлен script3 локально"
+  226  git config --global user.name "calavat98-lab"
+  227  git config --global user.email "calavat98@mail.ru"
+  228  git commit --amend --reset-author --no-edit
+  229  git log -1
+  230  git fetch origin
+  231  git diff main origin/main
+  232  git merge origin/main
+  233  ls
+  234  cat script1.sh 
+  235  git push origin main
+  236  ls
+  237  vim script2.sh 
+  238  git add script2.sh 
+  239  git commit -m "Локально изменен script2 на sh"
+  240  git pull origin main
+  241  git config pull.rebase false
+  242  git pull origin main
+  243  ls
+  244  vim script2.sh 
+  245  git add script2.sh 
+  246  git commit -m "Разрешен конфликт в script2.sh"
+  247  git push origin main
+  248  tail --help
+  249  tail -n 30 history
+  250  tail -n 30 history | tail -n 30
+  251  history | tail -n 30
+  252  history | tail -n 50 >text.txt
+  253  ls
+  254  vim text.txt 
+  255  ls
+  256  cd ..
+  257  ls
+  258  cd LINUX/
+  259  ls
+  260  pwd
+  261  git checkout -b rebase-test
+  262  echo "This is testing rebase" >> rebase_file.txt
+  263  rm text.txt 
+  264  git add rebase_file.txt 
+  265  git commit -m "Add file for testing rebase"
+  266  git checkout main
+  267  echo "Изменение в main" >> script1.sh 
+  268  git add script1.sh 
+  269  git commit -m "Коммит в main для создания развилки"
+  270  git checkout rebase-test 
+  271  git rebase main
+  272  git log --oneline --graph --all
+  273  git checkout main
+  274  git merge rebase-test 
+  275  git branch -d rebase-test 
+  276  hisotry | tail -n 20
+  277  history | tail -n 20
+  278  history | tail -n 25
+  279  history | tail -n 26
+  280  history | tail -n 27 > text.txt
+  281  ls
+  282  vim text.txt 
+  283  cat text.txt 
+  284  cat text.txt 
+  285  cat text.txt 
+  286  ls
+  287  cat script1.sh 
+  288  cat script2.sh 
+  289  git log
+  290  git push
+  291  ca text.txt 
+  292  cat text.txt 
+  293  vim text.txt 
+  294  git checkout script7 
+  295  git branch
+  296  ls
+  297  cat text.txt 
+  298  cat script1.sh 
+  299  cat script1.sh 
+  300  cat script2.sh 
+  301  git checkout script8
+  302  ls
+  303  cat script1.sh 
+  304  cat script2.sh 
+  305  git checkout script7
+  306  git rebase main
+  307  git status
+  308  vim script1.sh 
+  309  git rebase --abort
+  310  vim script1.sh 
+  311  ls
+  312  history | tail -n 30
+  313  history > text1.txt
+  314  ls
+  315  vim text1.txt 
+  316  git checkout main
+  317  ls -la
+  318  git push -u origin main
+  319  ls
+  320  git branch
+  321  ls
+  322  rm text1.txt 
+  323  rm text.txt 
+  324  ls
+  325  git status
+  326  vim script1.sh
+  327  ls
+  328  git status
+  329  git branch
+  330  ls
+  331  ls
+  332  git checkout --orphan temp-clean-branch
+  333  ls
+  334  cat script1.sh 
+  335  cat script2.sh 
+  336  cat script3.sh 
+  337  git rm -rf
+  338  yes
+  339  ls
+  340  git rm -rf .
+  341  yes
+  342  git rm -rf .
+  343  echo "# Проект очищен" > README.md
+  344  git add README.md 
+  345  git commit -m "Initial commit (repository cleaned)"
+  346  git push -f origin temp-clean-branch:main
+  347  git checkout main
+  348  git branch -D temp-clean-branch 
+  349  ls
+  350  reboot
+  351  ls
+  352  cd LINUX/
+  353  git branch
+  354  git branch -r | grep -v 'origin/main' | sed 's/origin\///' | xargs -I {} git push origin --delete {}
+  355  git branch | grep -v 'main' | xargs git branch -D
+  356  ls
+  357  git branch
+  358  rm script2.sh 
+  359  rm script3.sh 
+  360  rm rebase_file.txt 
+  361  ls
+  362  date
+  363  timedatectl set-ntp true
+  364  date
+  365  cd ..
+  366  ls
+  367  cat script12/
+  368  cd script12/
+  369  ls
+  370  cat script3.sh 
+  371  cd ..
+  372  ls
+  373  rm s*
+  374  rm -r s*
+  375  ls
+  376  rm testingGitOption/
+  377  rm -r testingGitOption/
+  378  ls
+  379  cd LINUX/
+  380  ls
+  381  echo "# Новая строка 30.10.2026 11:11" >> README.md
+  382  git add README.md 
+  383  git commit -m "Тест времени"
+  384  git push origin main
+  385  git push -f origin main
+  386  git remote -v
+  387  git remote set-url origin https://github.com:calavat98-lab/linux.git
+  388  git remote -v
+  389  ды
+  390  ls
+  391  cd ..
+  392  ls
+  393  git add -A
+  394  ls
+  395  cd LINUX/
+  396  git add -A
+  397  git commit -m "Удалены ненужные скрипты"
+  398  git push origin main
+  399  git remote set-url origin https://github.com/calavat98-lab/linux.git
+  400  git push origin main
+  401  ls
+  402  git branch
+  403  cd ..
+  404  git branch
+  405  ls -la
+  406  cd ~/.ssh
+  407  ls
+  408  cat id_ed25519
+  409  cat id_ed25519.pub 
+  410  cd ..
+  411  ls
+  412  git branch
+  413  cd L
+  414  cd LINUX/
+  415  git branch
+  416  cd ..
+  417  mv LINUX/ linux
+  418  ls
+  419  cd linux/
+  420  git branch
+  421  ssh-keygen -t ed25519 -C "calavat98@mail.ru"
+  422  cat ~/.ssh/id_ed25519.pub 
+  423  ssh-keygen -t ed25519 -C "calavat98@mail.ru"
+  424  cat ~/.ssh/id_ed25519.pub 
+  425  ssh -T git@github.com
+  426  cat ~/.ssh/id_ed25519.pub 
+  427  ssh -T git@github.com
+  428  ssh -T git@github.com
+  429  ssh -T git@github.com
+  430  ssh-keygen -t ed25519 -C "calavat98@mail.ru"
+  431  cat ~/.ssh/id_ed25519.pub 
+  432  ssh -T git@github.com
+  433  ssh -T git@github.com
+  434  ls
+  435  eval "$(ssh-agent -s)"
+  436  ssh-add ~/.ssh/id_ed25519
+  437  ssh -T git@github.com
+  438  ssh -T git@github.com
+  439  ssh -vT git@github.com
+  440  ssh -vT git@github.com | tail -n 25
+  441  ssh -vT git@github.com
+  442  cat ~/.ssh/id_ed25519.pub 
+  443  cat ~/.ssh/id_ed25519.pub 
+  444  ssh -vT git@github.com
+  445  ssh -T git@github.com
+  446  ls
+  447  rm -rf .git
+  448  ls
+  449  git init -b main
+  450  git status
+  451  rm text.txt 
+  452  git status
+  453  git add .
+  454  git commit -m "Initial commit"
+  455  eval "$(ssh-agent -s)"
+  456  ssh-add ~/.ssh/id_ed25519
+  457  git remote add origin git@github.com:calavat98-lab/linux.git
+  458  git push -u origin main --force
+  459  git branch -r
+  460  git fetch origin --prune
+  461  git remote set-url origin git@github.com:calavat98-lab/linux.git
+  462  git remote -v
+  463  ssh -T git@github.com
+  464  git push -u origin main
+  465  ls
+  466  ls -la
+  467  cd linux/
+  468  ls -la
+  469  cat script1.sh 
+  470  ls
+  471  ls
+  472  cat script1.sh 
+  473  cat README.md 
+  474  git status
+  475  cat script1.sh 
+  476  git log --oneline
+  477  ls
+  478  vim script1.sh 
+  479  git commit -am "Удалены лишние строки из скрипт1"
+  480  git push origin main
+  481  git status
+  482  history
+  483  history > text.txt
+  484  ls
+  485  vim text.txt 
+  486  ls
+  487  cd ..
+  488  ls
+  489  cd linux/
+  490  ls
+  491  mv text.txt /root/
+  492  ls
+  493  cd ..
+  494  ls
+  495  cd linux/
+  496  ls
+  497  reboot
+  498  exit
+  499  ls -la
+  500  cat .profile 
+  501  cat bashrc
+  502  cat .bashrc
+  503  vim .bashrc
+  504  ls
+  505  ls -la
+  506  cd linux/
+  507  ls
+  508  ls
+  509  git status
+  510  git branch
+  511  git checkout -b test-git
+  512  echo "Это тестовый файл 30.10.2026 17:13" > test.txt
+  513  git add test.txt 
+  514  git commit -m "Добавлен test.txt"
+  515  echo "Вторая строка 30.10.2026 17:15" >> test.txt 
+  516  git commit -am "Обновлен test.txt"
+  517  git log --oneline -n 4
+  518  git reset --soft HEAD~1
+  519  git log --oneline -n 2
+  520  cat test.txt 
+  521  git status
+  522  git reset --hard HEAD
+  523  cat test.txt 
+  524  git status
+  525  git revert HEAD
+  526  ls
+  527  cat script1.sh 
+  528  git log --oneline -n 3
+  529  git checkout main
+  530  echo "Строка из main 30.10.26 17:28" >> README.md 
+  531  git commit -am "Обновил README в main 30.10.26 17:29"
+  532  git checkout test-git 
+  533  git log
+  534  git log --oneline --graph --all
+  535  git rebase main
+  536  git log --oneline --graph -n 5
+  537  git checkout main
+  538  git branch -D test-git 
+  539  cat script1.sh 
+  540  git reset --hard HEAD~1
+  541  git log --oneline --graph -n 5
+  542  git status
+  543  git checkout -b test-conflict
+  544  ls
+  545  vim script1.sh 
+  546  git commit -am "Изменил первую строку в test-conflict 30.10.26 17:38"
+  547  git checkout main 
+  548  ls
+  549  vim script1.sh 
+  550  git commit -am "Изменил первую строку в main 30.10.26 17:40"
+  551  git checkout test-conflict 
+  552  git rebase main
+  553  ls
+  554  vim script1.sh 
+  555  git add script1.sh 
+  556  git status
+  557  git rebase --continue
+  558  git status
+  559  ls
+  560  cat script1.sh 
+  561  git status
+  562  git checkout main
+  563  git status
+  564  git checkout -b feature-clean
+  565  echo "Этот файл создан в ветке feature-clean 30.10.26 17:46" > feature.txt
+  566  git add feature.txt 
+  567  git commit -m "Добавлен feature.txt в ветке feature 30.10.26 17:48"
+  568  git checkout main
+  569  echo "Обновление из main во время работы над фичей 30.10.26 17:49" >> README.md 
+  570  git commit -am "Обновил README в main 30.10.26 17:49"
+  571  git checkout feature-clean 
+  572  git log --oneline --graph --all -n 5
+  573  git rebase main
+  574  git log --oneline --graph -n 5
+  575  ls
+  576  cat README.md 
+  577  cat feature.txt 
+  578  cat script1.sh 
+  579  git checkout main
+  580  git branch -D feature-clean 
+  581  git reset --hard HEAD~1
+  582  history > text1.txt
