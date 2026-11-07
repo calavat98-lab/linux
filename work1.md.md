@@ -309,7 +309,7 @@ database:
 =======  
   host: test-db.local  
   timeout: 60  
->>>>>>> 8e9f1a2... Update database timeout  
+СТРЕЛКА>>>>> 8e9f1a2... Update database timeout  
 
 5. Разрешаем конфликт руками: Нам нужен хост от продакшена (prod-db.local), но таймаут мы хотим поставить новый (60). Удаляем маркеры Git и приводим файл к такому виду:  
 *database:*  
