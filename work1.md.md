@@ -497,7 +497,7 @@ git reflog (Reference Log — журнал ссылок) — это локаль
   
 Операция в Git________Временные папки и файлы____________________________________________Как удаляются  
 git rebase / -i_______Папка **.git/rebase-merge/** или **.git/rebase-apply/**----------- git rebase --continue или --abort  
-git merge_____________Файлы **MERGE_HEAD**, **MERGE_MSG**, **MERGE_MODE**--------------- git commit после решения конфликта или git merge --abort  
+git merge_____________Файлы **MERGE_HEAD**, **MERGE_MSG**, **MERGE_MODE**--------------- git commit или git merge --abort  
 git cherry-pick_______Файл **CHERRY_PICK_HEAD** или папка **.git/sequencer/**----------- git cherry-pick --continue или --abort  
 git revert____________Файл **REVERT_HEAD** или папка **.git/sequencer/**---------------- git revert --continue или --abort  
 git bisect____________Папка **.git/refs/bisect/** и файлы **BISECT_***------------------ git bisect reset  
